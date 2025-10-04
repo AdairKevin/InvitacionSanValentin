@@ -1,0 +1,88 @@
+/*Header*/
+
+.hero img {
+  width: 100%;
+  height: auto;
+
+  overflow: hidden;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  position: absolute;
+
+  font-family: "Playfair Display", serif;
+  font-size: clamp(4rem, 5vw, 6rem);
+  font-weight: bold;
+  color: var(--text-secondary);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.445);
+
+  top: 1%;
+  margin: 0 auto;
+
+  width: 90%;
+  text-align: left;
+  padding-left: 1rem;
+}
+
+.hero h3 {
+  position: absolute;
+
+  font-family: "Instrument Serif", serif;
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  font-weight: 100;
+  color: var(--text-secondary);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.725);
+
+  margin: 0 auto;
+  margin-top: -200px;
+  width: 100%;
+  text-align: right;
+  padding-right: 2rem;
+}
+
+.hero p {
+  position: absolute;
+
+  font-family: "Instrument Serif", serif;
+  font-size: clamp(1rem, 3vw, 2.1rem);
+  font-weight: 100;
+  color: var(--text-secondary);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.721);
+
+  margin: 0 auto;
+  margin-top: -165px;
+  width: 100%;
+  text-align: right;
+  padding-right: 2rem;
+  padding-left: 4rem;
+}
+
+/*Divisor Love*/
+
+.divisorLove {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  padding: 0;
+}
+
+.divisorLove h1 {
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(15rem, 3vw, 30rem);
+  font-weight: 100;
+  line-height: 170px;
+  color: var(--text-primary);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.445);
+
+  margin-top: -55px;
+
+  overflow-y: hidden;
+}
+
+.nada {
+  height: 30px;
+}
