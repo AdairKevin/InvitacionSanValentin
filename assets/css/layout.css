@@ -1,0 +1,57 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0 auto;
+  min-height: 100vh;
+  font-family: var(--font-PT-serif);
+  overflow: auto;
+  color: var(--txt-body);
+  font-size: 0.95rem;
+  overflow-x: hidden;
+  background-color: rgba(241, 231, 215, 0.169);
+  box-sizing: border-box;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+p {
+  margin: 0;
+  font-size: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  font-size: inherit;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+/* selection */
+
+footer::selection {
+  background: var(--bg-color-1);
+  color: var(--txt-body);
+}
+
+footer a::selection {
+  background: var(--bg-color-1);
+  color: var(--txt-body);
+}
