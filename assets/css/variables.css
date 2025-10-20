@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=MonteCarlo&display=swap");
+
 :root {
   /* Gradiente de fondo */
   --bg-gradient: linear-gradient(
@@ -17,7 +19,7 @@
   --bg-container: #000000;
 
   /* fondo del contador  */
-  --bg-contador: #fff0f3;
+  --bg-contador: #cecece;
 
   /* Colores de texto */
   --text-primary: #b8002f;
@@ -27,6 +29,8 @@
   /* fondo de cards */
   --bg-card-1: #2d0a0a;
   --bg-card-2: #b8002f;
+
+  --bg-botones: #ffffff;
 
   /* fondo de botones */
   --bg-botones: linear-gradient(

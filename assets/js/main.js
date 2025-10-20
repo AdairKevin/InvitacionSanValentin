@@ -1,41 +1,43 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const DATE_TARGET = new Date("11/15/2025 01:30 PM");
+/* Time */
+const second = 1000,
+  minute = second * 60,
+  hour = minute * 60,
+  day = hour * 24;
 
-  const SPAN_DAYS = document.querySelector("span#days");
-  const SPAN_HOURS = document.querySelector("span#hours");
-  const SPAN_MINUTES = document.querySelector("span#minutes");
-  const SPAN_SECONDS = document.querySelector("span#seconds");
+let countDown = new Date("Feb 14, 2026 16:00:00").getTime(),
+  x = setInterval(function () {
+    let now = new Date().getTime(),
+      distance = countDown - now;
 
-  const MILLISECONDS_OF_A_SECOND = 1000;
-  const MILLISECONDS_OF_A_MINUTE = MILLISECONDS_OF_A_SECOND * 60;
-  const MILLISECONDS_OF_A_HOUR = MILLISECONDS_OF_A_MINUTE * 60;
-  const MILLISECONDS_OF_A_DAY = MILLISECONDS_OF_A_HOUR * 24;
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("dias").innerText = 0;
+      document.getElementById("horas").innerText = 0;
+      document.getElementById("minutos").innerText = 0;
+      document.getElementById("segundos").innerText = 0;
+      console.log("¡El tiempo ha terminado!");
+      return; // Termina la ejecución de la función
+    }
 
-  function updateCountdown() {
-    const NOW = new Date();
-    const DURATION = DATE_TARGET - NOW;
-    const REMAINING_DAYS = Math.floor(DURATION / MILLISECONDS_OF_A_DAY);
-    const REMAINING_HOURS = Math.floor(
-      (DURATION % MILLISECONDS_OF_A_DAY) / MILLISECONDS_OF_A_HOUR
-    );
-    const REMAINING_MINUTES = Math.floor(
-      (DURATION % MILLISECONDS_OF_A_HOUR) / MILLISECONDS_OF_A_MINUTE
-    );
-    const REMAINING_SECONDS = Math.floor(
-      (DURATION % MILLISECONDS_OF_A_MINUTE) / MILLISECONDS_OF_A_SECOND
-    );
+    const dias = Math.floor(distance / day);
+    const horas = Math.floor((distance % day) / hour);
+    const minutos = Math.floor((distance % hour) / minute);
+    const segundos = Math.floor((distance % minute) / second);
 
-    SPAN_DAYS.textContent = REMAINING_DAYS;
-    SPAN_HOURS.textContent = REMAINING_HOURS;
-    SPAN_MINUTES.textContent = REMAINING_MINUTES;
-    SPAN_SECONDS.textContent = REMAINING_SECONDS;
-  }
+    document.getElementById("dias").innerText = dias;
+    document.getElementById("horas").innerText = horas;
+    document.getElementById("minutos").innerText = minutos;
+    document.getElementById("segundos").innerText = segundos;
 
-  updateCountdown();
+    console.log(dias, horas, minutos, segundos);
+  }, second);
 
-  setInterval(updateCountdown, MILLISECONDS_OF_A_SECOND);
-});
-
+if (segundos == 0) {
+  (document.getElementById("dias").innerText = "00"),
+    (document.getElementById("horas").innerText = "00"),
+    (document.getElementById("minutos").innerText = "00"),
+    (document.getElementById("segundos").innerText = "00");
+}
 const audio = document.getElementById("audioPlayer");
 const playPauseBtn = document.getElementById("playPauseBtn");
 
