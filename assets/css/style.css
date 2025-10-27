@@ -223,9 +223,9 @@
   font-weight: 100;
   width: 100%;
   padding: 5px;
-  text-align: left;
+  text-align: center;
   margin: 0 auto;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   margin-top: 35px;
 }
 
@@ -233,6 +233,7 @@
   width: 100%;
   margin: 0 auto;
   height: auto;
+  margin-bottom: 40px;
 }
 
 .imagen-ceremonia img {
@@ -252,6 +253,154 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+/*Padres y Padrinos*/
+.padres-padrinos {
+  width: 100%;
+  height: auto;
+  padding: 1rem;
+  margin-bottom: 50px;
+  margin-top: 20px;
+}
+
+.padres-padrinos h1 {
+  font-family: "Instrument Serif", serif;
+  font-size: clamp(2.7rem, 3vw, 3.8rem);
+  font-weight: 200;
+  text-align: right;
+  margin-bottom: 5px;
+  padding: 0 1rem 0 1rem;
+}
+
+.padres-padrinos p {
+  font-family: "Instrument Serif", serif;
+  font-size: clamp(1rem, 3vw, 2.1rem);
+  font-weight: 100;
+  width: 100%;
+  padding: 0 1rem 0 1rem;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+.lista-padres-padrinos {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.padres-padrinos ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.padres-padrinos li {
+  font-family: "Instrument Serif", serif;
+  font-size: clamp(1rem, 3vw, 2.1rem);
+  text-align: left;
+  padding-left: 1rem;
+}
+
+.padres-padrinos li:first-child {
+  font-size: 1.1rem;
+  letter-spacing: 1.5px;
+  margin-bottom: 5px;
+}
+
+/*Detalles*/
+.detalles {
+  width: 100%;
+  height: auto;
+  padding: 1rem;
+  margin-bottom: 50px;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+.detalles h1 {
+  font-family: "Instrument Serif", serif;
+  text-transform: uppercase;
+  font-size: clamp(3.8rem, 3vw, 5rem);
+  font-weight: 100;
+  text-align: right;
+  margin: 40px 0 25px 0;
+  padding: 0 1rem 0 1rem;
+}
+
+.detalles p {
+  font-family: "Instrument Serif", serif;
+  font-size: clamp(1rem, 3vw, 2.1rem);
+  font-weight: 100;
+  width: 100%;
+  padding: 0 1rem 0 1rem;
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.detalles h2 {
+  font-family: "Instrument Serif", serif;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: 200;
+  text-align: left;
+  margin-bottom: 5px;
+  padding: 0 1rem 0 1rem;
+}
+
+.circulos {
+  display: flex;
+  justify-content: left;
+  gap: 15px;
+  margin-bottom: 30px;
+  padding: 0 1rem 0 1rem;
+}
+
+.circulos .circulo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Instrument Serif", serif;
+  font-size: clamp(1rem, 3vw, 1.5rem);
+}
+
+.separador-detalles img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  object-position: center;
+  aspect-ratio: 16/9;
+  display: block;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+
+.confirmar {
+  background-color: var(--text-primary);
+  color: var(--text-secondary);
+  padding: 3rem 0 3rem 0;
+  margin-bottom: -70px;
+}
+
+.confirmar h2 {
+  font-family: "Instrument Serif", serif;
+  font-size: clamp(3.8rem, 3vw, 5rem);
+  font-weight: 100;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.boton-confirmar {
+  padding: 0 1rem 0 1rem;
+  margin: 0 auto;
+}
+
+/*Botones*/
 
 button {
   width: 100%;
@@ -276,4 +425,20 @@ button {
 button:hover {
   background-color: var(--bg-botones);
   color: var(--text-secondary);
+}
+
+footer {
+  width: 100%;
+  height: auto;
+  padding: 1rem;
+  text-align: center;
+  background-color: var(--bg-footer);
+  color: var(--text-secondary);
+  font-family: "Instrument Serif", serif;
+  font-size: clamp(0.8rem, 3vw, 1.2rem);
+
+  a {
+    color: var(--text-primary);
+    font-size: 1rem;
+  }
 }
