@@ -1,0 +1,147 @@
+{
+  "_instrucciones": "Aquí se cambian TODOS los textos, fotos, links y datos de la invitación. Cambia solo lo que está a la derecha de los dos puntos. Los textos aceptan <br /> para saltos de línea. Para ocultar un grupo agrega \"mostrar\": false dentro de él solo si la plantilla lo permite. La fecha de evento.inicio (AAAA-MM-DDTHH:MM) la usan la cuenta regresiva y el calendario.",
+  "pagina": {
+    "titulo": "Invitacion San Valentin"
+  },
+  "evento": {
+    "inicio": "2027-02-14T16:00",
+    "duracionHoras": 8,
+    "tituloCalendario": "Boda Andrea & Luis",
+    "detallesCalendario": "Te esperamos para celebrar nuestra boda.",
+    "lugarCalendario": "Parroquia San Juan Bautista"
+  },
+  "portada": {
+    "foto": "assets/img/hero.jpg",
+    "fotoAlt": "Hero Image",
+    "nombres": "Andrea & Luis",
+    "fecha": "14 de Febrero, 2026",
+    "frase": "El amor nos une hoy y para siempre, celebrando el inicio de nuestra eternidad juntos."
+  },
+  "divisor": {
+    "linea1": "LO",
+    "linea2": "VE"
+  },
+  "presentacion": {
+    "titulo": "Nuesta Boda",
+    "frase": "En tus ojos hallé la promesa de caminos compartidos; en tu risa, la certeza de que cada amanecer será un poema que escribiremos juntos, y en tus manos el hogar en el que siempre querré volver. Te amo hoy y para siempre."
+  },
+  "separadores": {
+    "titulo1": "Nuestra Historia",
+    "foto1": "assets/img/hero.jpg",
+    "foto1Alt": "Separador",
+    "titulo2": "Justos para siempre",
+    "foto2": "assets/img/portada.jpg",
+    "foto2Alt": "Separador"
+  },
+  "cuentaRegresiva": {
+    "titulo": "Solo faltan",
+    "dias": "Días",
+    "horas": "Horas",
+    "minutos": "Minutos",
+    "segundos": "Segundos"
+  },
+  "calendario": {
+    "titulo": "Reserva la Fecha",
+    "frase": "Nos haría muy felices contar con tu presencia en este día tan especial.",
+    "diasSemana": "<span>L</span> <span>M</span> <span>M</span> <span>J</span> <span>V</span> <span>S</span> <span>D</span>",
+    "boton": "<i class=\"fa-regular fa-calendar-plus\"></i> Agregar a mi calendario",
+    "meses": [
+      "ENERO",
+      "FEBRERO",
+      "MARZO",
+      "ABRIL",
+      "MAYO",
+      "JUNIO",
+      "JULIO",
+      "AGOSTO",
+      "SEPTIEMBRE",
+      "OCTUBRE",
+      "NOVIEMBRE",
+      "DICIEMBRE"
+    ]
+  },
+  "ubicaciones": {
+    "titulo": "Ubicación",
+    "ceremoniaTexto": "Los esperamos 16:30 en la ceremonia religiosa que se llevará a cabo en la <strong> Parroquia San Juan Bautista</strong>, ubicada en la calle <strong> Amor Eterno 123</strong>. ¡No falten!",
+    "ceremoniaFoto": "assets/img/hero.jpg",
+    "ceremoniaMapa": "https://www.google.com/maps",
+    "ceremoniaBoton": "Ver Ubicación",
+    "recepcionTexto": "Los esperamos 20:00 en la fiesta que se llevará a cabo en la <strong> Parroquia San Juan Bautista</strong>, ubicada en la calle <strong> Amor Eterno 123</strong>. ¡No falten!",
+    "recepcionFoto": "assets/img/portada.jpg",
+    "recepcionMapa": "https://www.google.com/maps",
+    "recepcionBoton": "Ver Ubicación"
+  },
+  "familia": {
+    "titulo": "Con la bendición",
+    "texto": "De nuestros padres y padrinos, quienes nos han guiado con amor y sabiduría en este hermoso camino hacia la unión.",
+    "grupos": [
+      {
+        "titulo": "Padres del novio:",
+        "nombre1": "María López Gómez",
+        "nombre2": "Carlos Pérez López"
+      },
+      {
+        "titulo": "Padres de la novia:",
+        "nombre1": "Laura Martínez López",
+        "nombre2": "Javier Gómez López"
+      }
+    ]
+  },
+  "cronograma": {
+    "titulo": "Nuestro Día",
+    "frase": "Cada momento ha sido cuidadosamente preparado para compartir con ustedes el día más importante de nuestras vidas.",
+    "actividades": [
+      {
+        "hora": "16:30",
+        "actividad": "Ceremonia Religiosa",
+        "lugar": "Parroquia San Juan Bautista"
+      },
+      {
+        "hora": "18:00",
+        "actividad": "Sesión de Fotografías",
+        "lugar": "Jardines del recinto"
+      },
+      {
+        "hora": "19:00",
+        "actividad": "Cóctel de Bienvenida",
+        "lugar": "Recepción de invitados"
+      },
+      {
+        "hora": "20:00",
+        "actividad": "Recepción",
+        "lugar": "Cena • Brindis • Baile"
+      },
+      {
+        "hora": "23:30",
+        "actividad": "Fin de la Celebración",
+        "lugar": "Gracias por acompañarnos."
+      }
+    ]
+  },
+  "detalles": {
+    "titulo": "Detalles importantes",
+    "vestimentaTitulo": "01 Código de vestimenta",
+    "vestimentaTexto": "Formal: Traje oscuro para los hombres y vestido largo para las mujeres. Por favor, eviten el color blanco. Te dejamos algunas sugerencias de color",
+    "regalosTitulo": "02 Mesa de regalos",
+    "regalosTexto1": "Hemos creado una mesa de regalos en",
+    "regalosLink": "https://www.ejemplo.com/mesaderegalos",
+    "regalosLinkTexto": "Ejemplo.com",
+    "regalosTexto2": "para aquellos que deseen contribuir a nuestro nuevo hogar. ¡Gracias por su generosidad!",
+    "puntualidadTitulo": "03 Puntualidad",
+    "puntualidadTexto": "Les pedimos llegar con 15 minutos de anticipación para asegurar que la ceremonia comience a tiempo. ¡Gracias por su comprensión!",
+    "ninosTitulo": "04 Niños",
+    "ninosTexto": "Aunque amamos a los niños, esta ocasión es para adultos. Agradecemos su comprensión y apoyo.",
+    "confirmarTitulo": "Confirmar asistencia",
+    "confirmarTexto1": "Por favor, confirmen su asistencia antes del 1 de Febrero de 2026 enviando un correo a",
+    "confirmarLink": "mailto:andrea@example.com",
+    "confirmarLinkTexto": "andrea@example.com",
+    "confirmarTexto2": ". ¡Los esperamos con alegría!",
+    "confirmarBoton": "Confirmar asistencia"
+  },
+  "footer": {
+    "texto": "Diseña tu invitación en",
+    "link": "https://www.facebook.com/profile.php?id=61568997140138",
+    "marca": "Mirai",
+    "anio": "@2025"
+  }
+}

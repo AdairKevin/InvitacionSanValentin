@@ -1,80 +1,71 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="es">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invitacion San Valentin</title>
-    <link rel="icon" href="heart.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/layout.css" />
-    <link rel="stylesheet" href="assets/css/responsive.css" />
-    <link rel="stylesheet" href="assets/css/variables.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css"
-    />
+    <link rel="icon" href="heart.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css">
   </head>
-
   <body class="center">
+    <!-- Todos los textos, fotos y links se editan en contenido.json; aquí solo van variables -->
+    <template id="plantilla">
     <div class="content">
       <!-- Header-->
       <section class="header">
         <div class="hero">
-          <img src="assets/img/hero.jpg" alt="Hero Image" />
-          <h1>Andrea & Luis</h1>
-          <h3 class="fecha">14 de Febrero, 2026</h3>
-          <p>
-            El amor nos une hoy y para siempre, celebrando el inicio de nuestra
-            eternidad juntos.
-          </p>
+          <img src="{{portada.foto}}" alt="{{portada.fotoAlt}}">
+          <h1>{{portada.nombres}}</h1>
+          <h3 class="fecha">{{portada.fecha}}</h3>
+          <p>{{portada.frase}}</p>
         </div>
       </section>
 
       <!-- Divisor Love -->
       <div class="divisorLove">
         <h1>
-          LO <br />
-          VE
+          {{divisor.linea1}} <br>
+          {{divisor.linea2}}
           <div class="nada"></div>
         </h1>
       </div>
 
       <!-- Pre Info -->
       <div class="pre-info">
-        <h1 class="p-titulo">Nuesta Boda</h1>
-        <p class="p-frase">
-          En tus ojos hallé la promesa de caminos compartidos; en tu risa, la
-          certeza de que cada amanecer será un poema que escribiremos juntos, y
-          en tus manos el hogar en el que siempre querré volver. Te amo hoy y
-          para siempre.
-        </p>
+        <h1 class="p-titulo">{{presentacion.titulo}}</h1>
+        <p class="p-frase">{{presentacion.frase}}</p>
       </div>
 
       <div class="separadorInfo">
-        <h1 class="s-titulo">Nuestra Historia</h1>
-        <img src="assets/img/hero.jpg" alt="Separador" />
+        <h1 class="s-titulo">{{separadores.titulo1}}</h1>
+        <img src="{{separadores.foto1}}" alt="{{separadores.foto1Alt}}">
       </div>
 
       <div class="contador">
         <div class="titulo-contador">
-          <h1>Solo faltan</h1>
+          <h1>{{cuentaRegresiva.titulo}}</h1>
         </div>
         <div class="contador-container">
           <ul class="date-time">
             <li>
               <div class="time_number" id="dias"></div>
-              <div class="time_txt">Días</div>
+              <div class="time_txt">{{cuentaRegresiva.dias}}</div>
             </li>
             <li>
               <div class="time_number" id="horas"></div>
-              <div class="time_txt">Horas</div>
+              <div class="time_txt">{{cuentaRegresiva.horas}}</div>
             </li>
             <li>
               <div class="time_number" id="minutos"></div>
-              <div class="time_txt">Minutos</div>
+              <div class="time_txt">{{cuentaRegresiva.minutos}}</div>
             </li>
             <li>
               <div class="time_number" id="segundos"></div>
-              <div class="time_txt">Segundos</div>
+              <div class="time_txt">{{cuentaRegresiva.segundos}}</div>
             </li>
           </ul>
         </div>
@@ -82,280 +73,149 @@
 
       <!-- Calendario -->
       <section class="calendario-evento">
-        <h1 class="calendario-titulo">Reserva la Fecha</h1>
+        <h1 class="calendario-titulo">{{calendario.titulo}}</h1>
 
-        <p class="calendario-frase">
-          Nos haría muy felices contar con tu presencia en este día tan
-          especial.
-        </p>
+        <p class="calendario-frase">{{calendario.frase}}</p>
 
         <div class="calendario-card">
           <div class="cal-header">
-            <span>FEBRERO</span>
-            <h2>2027</h2>
+            <span id="calendarioMes"></span>
+            <h2 id="calendarioAnio"></h2>
           </div>
 
-          <div class="dias-semana">
-            <span>L</span>
-            <span>M</span>
-            <span>M</span>
-            <span>J</span>
-            <span>V</span>
-            <span>S</span>
-            <span>D</span>
-          </div>
+          <div class="dias-semana">{{calendario.diasSemana}}</div>
 
-          <div class="dias-mes">
-            <span>1</span>
-            <span>2</span>
-            <span>3</span>
-            <span>4</span>
-            <span>5</span>
-            <span>6</span>
-            <span>7</span>
-
-            <span>8</span>
-            <span>9</span>
-            <span>10</span>
-            <span>11</span>
-            <span>12</span>
-            <span>13</span>
-
-            <span class="dia-especial">14</span>
-
-            <span>15</span>
-            <span>16</span>
-            <span>17</span>
-            <span>18</span>
-            <span>19</span>
-            <span>20</span>
-            <span>21</span>
-
-            <span>22</span>
-            <span>23</span>
-            <span>24</span>
-            <span>25</span>
-            <span>26</span>
-            <span>27</span>
-            <span>28</span>
-          </div>
+          <div class="dias-mes" id="calendarioDias"></div>
         </div>
 
-        <button class="agendar-btn">
-          <i class="fa-regular fa-calendar-plus"></i>
-          Agregar a mi calendario
-        </button>
+        <button class="agendar-btn" id="calendarioBoton">{{calendario.boton}}</button>
       </section>
 
       <!-- info -->
       <div class="info">
-        <h1>Ubicación</h1>
+        <h1>{{ubicaciones.titulo}}</h1>
 
         <div class="imagen-ceremonia">
-          <p>
-            Los esperamos 16:30 en la ceremonia religiosa que se llevará a cabo
-            en la
-            <strong> Parroquia San Juan Bautista</strong>, ubicada en la calle
-            <strong> Amor Eterno 123</strong>. ¡No falten!
-          </p>
+          <p>{{ubicaciones.ceremoniaTexto}}</p>
 
-          <img src="assets/img/hero.jpg" alt="" />
+          <img src="{{ubicaciones.ceremoniaFoto}}" alt="">
 
-          <button
-            class="ubicacion"
-            onclick="window.open('https://www.google.com/maps', '_blank')"
-          >
-            Ver Ubicación
-          </button>
+          <button class="ubicacion" onclick="window.open('{{ubicaciones.ceremoniaMapa}}', '_blank')">{{ubicaciones.ceremoniaBoton}}</button>
         </div>
 
         <div class="imagen-ceremonia">
-          <p>
-            Los esperamos 20:00 en la fiesta que se llevará a cabo en la
-            <strong> Parroquia San Juan Bautista</strong>, ubicada en la calle
-            <strong> Amor Eterno 123</strong>. ¡No falten!
-          </p>
+          <p>{{ubicaciones.recepcionTexto}}</p>
 
-          <img src="assets/img/portada.jpg" alt="" />
+          <img src="{{ubicaciones.recepcionFoto}}" alt="">
 
-          <button
-            class="ubicacion"
-            onclick="window.open('https://www.google.com/maps', '_blank')"
-          >
-            Ver Ubicación
-          </button>
+          <button class="ubicacion" onclick="window.open('{{ubicaciones.recepcionMapa}}', '_blank')">{{ubicaciones.recepcionBoton}}</button>
         </div>
       </div>
 
       <div class="padres-padrinos">
-        <h1>Con la bendición</h1>
-        <p>
-          De nuestros padres y padrinos, quienes nos han guiado con amor y
-          sabiduría en este hermoso camino hacia la unión.
-        </p>
+        <h1>{{familia.titulo}}</h1>
+        <p>{{familia.texto}}</p>
 
         <div class="lista-padres-padrinos">
+          {{#familia.grupos}}
           <ul>
-            <li>Padres del novio:</li>
-            <li>María López Gómez</li>
-            <li>Carlos Pérez López</li>
+            <li>{{titulo}}</li>
+            <li>{{nombre1}}</li>
+            <li>{{nombre2}}</li>
           </ul>
+          {{/familia.grupos}}
 
-          <ul>
-            <li>Padres de la novia:</li>
-            <li>Laura Martínez López</li>
-            <li>Javier Gómez López</li>
-          </ul>
+          
         </div>
       </div>
 
       <div class="separadorInfo">
-        <h1 class="s-titulo">Justos para siempre</h1>
-        <img src="assets/img/portada.jpg" alt="Separador" />
+        <h1 class="s-titulo">{{separadores.titulo2}}</h1>
+        <img src="{{separadores.foto2}}" alt="{{separadores.foto2Alt}}">
       </div>
 
       <!-- Cronograma -->
       <section class="cronograma">
-        <h1 class="cronograma-titulo">Nuestro Día</h1>
+        <h1 class="cronograma-titulo">{{cronograma.titulo}}</h1>
 
-        <p class="cronograma-frase">
-          Cada momento ha sido cuidadosamente preparado para compartir con
-          ustedes el día más importante de nuestras vidas.
-        </p>
+        <p class="cronograma-frase">{{cronograma.frase}}</p>
 
         <div class="timeline">
+          {{#cronograma.actividades}}
           <div class="evento">
-            <div class="hora">16:30</div>
+            <div class="hora">{{hora}}</div>
 
             <div class="linea">
               <span></span>
             </div>
 
             <div class="contenido">
-              <h2>Ceremonia Religiosa</h2>
-              <p>Parroquia San Juan Bautista</p>
+              <h2>{{actividad}}</h2>
+              <p>{{lugar}}</p>
             </div>
           </div>
+          {{/cronograma.actividades}}
 
-          <div class="evento">
-            <div class="hora">18:00</div>
+          
 
-            <div class="linea">
-              <span></span>
-            </div>
+          
 
-            <div class="contenido">
-              <h2>Sesión de Fotografías</h2>
-              <p>Jardines del recinto</p>
-            </div>
-          </div>
+          
 
-          <div class="evento">
-            <div class="hora">19:00</div>
-
-            <div class="linea">
-              <span></span>
-            </div>
-
-            <div class="contenido">
-              <h2>Cóctel de Bienvenida</h2>
-              <p>Recepción de invitados</p>
-            </div>
-          </div>
-
-          <div class="evento">
-            <div class="hora">20:00</div>
-
-            <div class="linea">
-              <span></span>
-            </div>
-
-            <div class="contenido">
-              <h2>Recepción</h2>
-              <p>Cena • Brindis • Baile</p>
-            </div>
-          </div>
-
-          <div class="evento">
-            <div class="hora">23:30</div>
-
-            <div class="linea">
-              <span></span>
-            </div>
-
-            <div class="contenido">
-              <h2>Fin de la Celebración</h2>
-              <p>Gracias por acompañarnos.</p>
-            </div>
-          </div>
+          
         </div>
       </section>
 
       <div class="detalles">
-        <h1>Detalles importantes</h1>
+        <h1>{{detalles.titulo}}</h1>
         <div class="codigo-vestimenta">
-          <h2>01 Código de vestimenta</h2>
-          <p>
-            Formal: Traje oscuro para los hombres y vestido largo para las
-            mujeres. Por favor, eviten el color blanco. Te dejamos algunas
-            sugerencias de color
-          </p>
+          <h2>{{detalles.vestimentaTitulo}}</h2>
+          <p>{{detalles.vestimentaTexto}}</p>
         </div>
 
         <div class="mesa-regalos">
-          <h2>02 Mesa de regalos</h2>
+          <h2>{{detalles.regalosTitulo}}</h2>
           <p>
-            Hemos creado una mesa de regalos en
-            <a href="https://www.ejemplo.com/mesaderegalos" target="_blank"
-              >Ejemplo.com</a
-            >
-            para aquellos que deseen contribuir a nuestro nuevo hogar. ¡Gracias
-            por su generosidad!
+            {{detalles.regalosTexto1}}
+            <a href="{{detalles.regalosLink}}" target="_blank">{{detalles.regalosLinkTexto}}</a>
+            {{detalles.regalosTexto2}}
           </p>
         </div>
 
         <div class="puntualidad">
-          <h2>03 Puntualidad</h2>
-          <p>
-            Les pedimos llegar con 15 minutos de anticipación para asegurar que
-            la ceremonia comience a tiempo. ¡Gracias por su comprensión!
-          </p>
+          <h2>{{detalles.puntualidadTitulo}}</h2>
+          <p>{{detalles.puntualidadTexto}}</p>
         </div>
 
         <div class="niños">
-          <h2>04 Niños</h2>
-          <p>
-            Aunque amamos a los niños, esta ocasión es para adultos. Agradecemos
-            su comprensión y apoyo.
-          </p>
+          <h2>{{detalles.ninosTitulo}}</h2>
+          <p>{{detalles.ninosTexto}}</p>
         </div>
 
         <div class="confirmar">
-          <h2>Confirmar asistencia</h2>
+          <h2>{{detalles.confirmarTitulo}}</h2>
           <p>
-            Por favor, confirmen su asistencia antes del 1 de Febrero de 2026
-            enviando un correo a
-            <a href="mailto:andrea@example.com">andrea@example.com</a>. ¡Los
-            esperamos con alegría!
+            {{detalles.confirmarTexto1}}
+            <a href="{{detalles.confirmarLink}}">{{detalles.confirmarLinkTexto}}</a>{{detalles.confirmarTexto2}}
           </p>
 
           <div class="boton-confirmar">
-            <button class="confirmar-asistencia">Confirmar asistencia</button>
+            <button class="confirmar-asistencia">{{detalles.confirmarBoton}}</button>
           </div>
         </div>
       </div>
 
       <!-- Footer -->
       <footer>
-        Diseña tu invitación en
-        <a
-          href="https://www.facebook.com/profile.php?id=61568997140138"
-          target="_blank"
-          >Mirai</a
-        >
-        @2025
+        {{footer.texto}}
+        <a href="{{footer.link}}" target="_blank">{{footer.marca}}</a>
+        {{footer.anio}}
       </footer>
     </div>
-    <script src="assets/js/main.js"></script>
+
+      <script src="assets/js/main.js"></script>
+    </template>
+
+    <script src="assets/js/motor.js"></script>
   </body>
 </html>
